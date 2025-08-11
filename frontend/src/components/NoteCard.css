@@ -1,67 +1,96 @@
+
 .note-card {
-  background-color: white;
-  border-radius: 6px;
-  padding: 15px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-base);
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
 }
 
 .note-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: var(--spacing-sm);
+  gap: var(--spacing-md);
 }
 
 .note-title {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 600;
+  word-break: break-word;
 }
 
 .note-actions {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
 }
 
 .btn-small {
-  font-size: 0.85rem;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 4px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid transparent;
   cursor: pointer;
+  transition: var(--transition-base);
+  text-decoration: none;
 }
 
 .btn-edit {
-  background-color: #ffc107;
-  color: #333;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
-
 .btn-edit:hover {
-  background-color: #e0a800;
+  background-color: var(--color-primary);
+  color: #fff;
 }
 
 .btn-delete {
-  background-color: #dc3545;
-  color: white;
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+.btn-delete:hover {
+  background-color: var(--color-danger);
+  color: #fff;
 }
 
-.btn-delete:hover {
-  background-color: #b02a37;
+.note-card small {
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+  text-transform: capitalize;
 }
 
 .note-items {
-  margin-top: 10px;
   list-style: none;
-  padding: 0;
+  margin-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-md);
 }
 
 .note-item {
-  padding: 6px 0;
-  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
 }
 
-.note-item:last-child {
-  border-bottom: none;
+.note-item .checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary); /* Modern way to color checkboxes */
+  cursor: pointer;
 }
 
-.checkbox {
-  margin-right: 8px;
+.note-item span {
+  flex-grow: 1;
 }
