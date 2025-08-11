@@ -1,0 +1,67 @@
+.note-card {
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.note-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-small {
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #b02a37;
+}
+
+.note-items {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.note-item {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.note-item:last-child {
+  border-bottom: none;
+}
+
+.checkbox {
+  margin-right: 8px;
+}
