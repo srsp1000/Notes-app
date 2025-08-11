@@ -9,9 +9,14 @@ const notesRoutes = require('./notes');
 
 const app = express();
 
-app.use(cors({
-  origin: 'http://localhost:3000', // The origin of your React frontend
+// app.use(cors({
+//   origin: 'http://localhost:3000', // The origin of your React frontend
   
+// }));
+app.use(cors({
+  origin: process.env.FRONTEND_URL,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 
